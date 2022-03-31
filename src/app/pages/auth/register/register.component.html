@@ -1,0 +1,37 @@
+<div class="flexboxs">
+  <header class="header">
+    <img class="" src="/assets/images/retaily.png" />
+    <!-- <p-button class="p-button-raised p-button-rounded" label="Rastrear envío" icon="pi pi-search"></p-button> -->
+    <div>Ya eres miembro ? <a href="#"> Iniciar sesión</a></div>
+  </header>
+  <div>
+      <h1 class="text-register">Crea tu cuenta y comienza a enviar!</h1>
+  </div>
+
+  <form class="register-container" [formGroup]="Form" (ngSubmit)="onSubmit()">
+    <div class="form" formGroupName="personal">
+        <i class="pi pi-user title-form"> Información personal</i>
+        <input class="input-form" type="text"  id="name" formControlName="nombre" name="nombre" placeholder="nombre">
+        <input class="input-form" type="text"  formControlName="apellido" placeholder="apellidos">
+        <input class="input-form" type="text"  formControlName="phone" placeholder="phone">
+        <input class="input-form" type="text"  formControlName="email" placeholder="email">
+        <input class="input-form" type="text"  formControlName="run" placeholder="run">
+    </div>
+    <div class="form" formGroupName="store">
+        <div class="title-form"><fa-icon  [icon]=store></fa-icon>Información Tienda</div>
+        <input class="input-form" type="text"  formControlName="nombre" placeholder="nombre">
+        <input class="input-form" type="text"  formControlName="type_pay" placeholder="Tipo de facturacion">
+        <input class="input-form" type="text"  formControlName="direccion" placeholder="direccion">
+        <input class="input-form"  type="text"  formControlName="comuna" placeholder="comuna">
+        <input class="input-form" type="text"  formControlName="url" placeholder="url">
+    </div>
+    <div class="form" formGroupName="send">
+        <div class="title-form"><fa-icon class="title-form" [icon]=box></fa-icon>Información Envíos</div>
+        <input class="input-form" type="text"  formControlName="product" placeholder="Qué productos envías">
+        <input class="input-form" type="text"  formControlName="cuantity" placeholder="Cuántos envios haces al mes?">
+        <input class="input-form" type="text"  formControlName="where" placeholder="Dónde debemos retirar los bultos?">
+        <button pButton type="submit" class=" p-button-raised p-button-rounded" icon="pi pi-arrow-right" iconPos="right"  label="Siguiente"></button>
+    </div>
+</form>
+
+</div>
